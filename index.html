@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Bold, modern product range. Follow us on Instagram, TikTok, and Facebook for the latest drops and behind-the-scenes." />
+    <meta property="og:title" content="YOUR BRAND — Product Range & Social Hub" />
+    <meta property="og:description"
+        content="Discover our product range. Follow the drop on Instagram, TikTok, and Facebook." />
+    <meta property="og:type" content="website" />
+    <title>YOUR BRAND — Product Range & Social Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #111111;
+            --paper: #f7f3ec;
+            --accent: #e63b2e;
+            --accent-2: #1b1b1b;
+            --muted: #6b655c;
+            --card: #ffffff;
+            --radius: 18px;
+            --max: 1180px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            line-height: 1.05;
+            letter-spacing: -.02em
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        /* ---------- NAV ---------- */
+        header.nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(247, 243, 236, .85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            letter-spacing: -.03em
+        }
+
+        .logo span {
+            color: var(--accent)
+        }
+
+        .nav-links {
+            display: none;
+            gap: 26px;
+            font-size: .95rem;
+            font-weight: 500
+        }
+
+        .nav-links a:hover {
+            color: var(--accent)
+        }
+
+        .nav-cta {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: .85rem;
+            font-weight: 600;
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            transform: translateY(-1px)
+        }
+
+        @media(min-width:820px) {
+            .nav-links {
+                display: flex
+            }
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 0 72px;
+            background:
+                radial-gradient(1200px 500px at 80% -10%, rgba(230, 59, 46, .14), transparent 60%),
+                radial-gradient(800px 400px at -10% 110%, rgba(27, 27, 27, .08), transparent 60%);
+        }
+
+        .hero-grid {
+            display: grid;
+            gap: 36px;
+            align-items: center
+        }
+
+        @media(min-width:900px) {
+            .hero-grid {
+                grid-template-columns: 1.15fr 1fr;
+                gap: 56px
+            }
+
+            .hero {
+                padding: 96px 0 110px
+            }
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 26px;
+            height: 2px;
+            background: var(--accent)
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 7vw, 4.6rem)
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent)
+        }
+
+        .hero p.lead {
+            margin: 22px 0 30px;
+            font-size: 1.08rem;
+            color: var(--muted);
+            max-width: 52ch
+        }
+
+        .btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: .95rem;
+            transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 8px 22px rgba(230, 59, 46, .35)
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(230, 59, 46, .45)
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 1.5px solid var(--ink)
+        }
+
+        .btn-ghost:hover {
+            background: var(--ink);
+            color: var(--paper)
+        }
+
+        .hero-visual {
+            position: relative
+        }
+
+        .hero-frame {
+            border-radius: 26px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            background:
+                linear-gradient(135deg, #1b1b1b 0%, #2c2a27 45%, #e63b2e 140%);
+            box-shadow: var(--shadow);
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 26px;
+            color: #fff;
+        }
+
+        .hero-frame::before {
+            content: "PRODUCT · DROP 01";
+            position: absolute;
+            top: 22px;
+            left: 22px;
+            font-size: .7rem;
+            letter-spacing: .18em;
+            font-weight: 600;
+            background: rgba(255, 255, 255, .15);
+            padding: 7px 12px;
+            border-radius: 999px;
+            backdrop-filter: blur(6px);
+        }
+
+        .hero-frame .tag {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            max-width: 12ch
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -18px;
+            right: 14px;
+            background: var(--paper);
+            color: var(--ink);
+            padding: 14px 18px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            font-size: .8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #2ecc71;
+            box-shadow: 0 0 0 4px rgba(46, 204, 113, .18)
+        }
+
+        /* ---------- SOCIAL STRIP ---------- */
+        .social-strip {
+            border-top: 1px solid rgba(0, 0, 0, .07);
+            border-bottom: 1px solid rgba(0, 0, 0, .07);
+            background: #fff;
+        }
+
+        .social-strip .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px 34px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .social-strip p {
+            font-size: .85rem;
+            color: var(--muted);
+            font-weight: 500
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 15px;
+            border-radius: 999px;
+            background: var(--paper);
+            font-size: .82rem;
+            font-weight: 600;
+            transition: background .2s, color .2s, transform .2s;
+        }
+
+        .social-icons a:hover {
+            background: var(--ink);
+            color: var(--paper);
+            transform: translateY(-1px)
+        }
+
+        .social-icons svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor
+        }
+
+        /* ---------- SECTION HEADS ---------- */
+        .section {
+            padding: 80px 0
+        }
+
+        .section-head {
+            max-width: 640px;
+            margin-bottom: 44px
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.9rem, 4.2vw, 2.8rem)
+        }
+
+        .section-head p {
+            color: var(--muted);
+            margin-top: 12px;
+            font-size: 1rem
+        }
+
+        /* ---------- PRODUCTS ---------- */
+        .products {
+            background: #fff
+        }
+
+        .product-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr
+        }
+
+        @media(min-width:640px) {
+            .product-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(min-width:960px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .product {
+            background: var(--paper);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow)
+        }
+
+        .product-img {
+            aspect-ratio: 1/1;
+            background: linear-gradient(135deg, #e6ded2, #cfc4b4);
+            position: relative;
+        }
+
+        .product-img.alt1 {
+            background: linear-gradient(135deg, #1b1b1b, #3a3833)
+        }
+
+        .product-img.alt2 {
+            background: linear-gradient(135deg, #e63b2e, #8a1f16)
+        }
+
+        .product-img.alt3 {
+            background: linear-gradient(135deg, #d9cfbe, #a89a83)
+        }
+
+        .product-img.alt4 {
+            background: linear-gradient(135deg, #2c2a27, #6b655c)
+        }
+
+        .product-img.alt5 {
+            background: linear-gradient(135deg, #f0b429, #c47a0b)
+        }
+
+        .product-img span {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            font-size: .7rem;
+            letter-spacing: .14em;
+            font-weight: 600;
+            background: rgba(255, 255, 255, .85);
+            padding: 6px 11px;
+            border-radius: 999px;
+            color: var(--ink);
+        }
+
+        .product-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1
+        }
+
+        .product-body h3 {
+            font-size: 1.25rem
+        }
+
+        .product-body p {
+            font-size: .9rem;
+            color: var(--muted);
+            flex: 1
+        }
+
+        .product-link {
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .product-link:hover {
+            text-decoration: underline
+        }
+
+        /* ---------- STORY ---------- */
+        .story {
+            background: var(--ink);
+            color: var(--paper);
+            border-radius: 0
+        }
+
+        .story .section-head h2 {
+            color: var(--paper)
+        }
+
+        .story .section-head p {
+            color: #c9c2b8
+        }
+
+        .story-grid {
+            display: grid;
+            gap: 36px
+        }
+
+        @media(min-width:900px) {
+            .story-grid {
+                grid-template-columns: 1.1fr 1fr;
+                align-items: center;
+                gap: 64px
+            }
+        }
+
+        .story-quote {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+            line-height: 1.25;
+            font-weight: 600;
+            letter-spacing: -.01em;
+            padding-left: 22px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .story-copy p {
+            color: #c9c2b8;
+            margin-top: 18px;
+            font-size: 1rem
+        }
+
+        .story-img {
+            aspect-ratio: 4/5;
+            border-radius: 24px;
+            background: linear-gradient(160deg, #e63b2e, #7a1c14 60%, #1b1b1b);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-img::after {
+            content: "BEHIND THE SCENES · 2025";
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: .7rem;
+            letter-spacing: .16em;
+            font-weight: 600;
+            background: rgba(255, 255, 255, .14);
+            padding: 7px 12px;
+            border-radius: 999px;
+            color: #fff;
+            backdrop-filter: blur(6px);
+        }
+
+        /* ---------- LIVE FEED ---------- */
+        .feed {
+            background: #fff
+        }
+
+        .feed-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 16px;
+            margin-bottom: 36px
+        }
+
+        .feed-header h2 {
+            font-size: clamp(1.9rem, 4.2vw, 2.8rem);
+            max-width: 18ch
+        }
+
+        .feed-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        @media(min-width:700px) {
+            .feed-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .feed-tile {
+            aspect-ratio: 1/1;
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            background: linear-gradient(135deg, #e6ded2, #cfc4b4);
+            transition: transform .25s ease;
+        }
+
+        .feed-tile:hover {
+            transform: scale(1.02)
+        }
+
+        .feed-tile::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, .35), transparent 55%);
+        }
+
+        .feed-tile.t1 {
+            background: linear-gradient(135deg, #1b1b1b, #3a3833)
+        }
+
+        .feed-tile.t2 {
+            background: linear-gradient(135deg, #e63b2e, #8a1f16)
+        }
+
+        .feed-tile.t3 {
+            background: linear-gradient(135deg, #d9cfbe, #a89a83)
+        }
+
+        .feed-tile.t4 {
+            background: linear-gradient(135deg, #2c2a27, #6b655c)
+        }
+
+        .feed-tile.t5 {
+            background: linear-gradient(135deg, #f0b429, #c47a0b)
+        }
+
+        .feed-tile.t6 {
+            background: linear-gradient(135deg, #7a9e7e, #3d5a40)
+        }
+
+        .feed-tile .play {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            z-index: 2;
+        }
+
+        .feed-tile .play svg {
+            width: 38px;
+            height: 38px;
+            fill: #fff;
+            opacity: .9
+        }
+
+        /* ---------- CTA / FOLLOW ---------- */
+        .follow-cta {
+            background:
+                radial-gradient(700px 300px at 50% 0%, rgba(230, 59, 46, .2), transparent 70%),
+                var(--ink);
+            color: var(--paper);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .follow-cta h2 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            max-width: 16ch;
+            margin: 0 auto 18px
+        }
+
+        .follow-cta p {
+            color: #c9c2b8;
+            max-width: 48ch;
+            margin: 0 auto 34px
+        }
+
+        .platform-cards {
+            display: grid;
+            gap: 14px;
+            grid-template-columns: 1fr;
+            max-width: 880px;
+            margin: 0 auto
+        }
+
+        @media(min-width:720px) {
+            .platform-cards {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .platform {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 16px;
+            padding: 22px;
+            text-align: left;
+            transition: background .25s, transform .25s;
+        }
+
+        .platform:hover {
+            background: rgba(255, 255, 255, .12);
+            transform: translateY(-3px)
+        }
+
+        .platform .p-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px
+        }
+
+        .platform .p-head svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff
+        }
+
+        .platform .p-head span {
+            font-size: .75rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #c9c2b8
+        }
+
+        .platform h3 {
+            font-size: 1.2rem;
+            margin-bottom: 6px
+        }
+
+        .platform p {
+            font-size: .85rem;
+            color: #c9c2b8;
+            margin-bottom: 14px
+        }
+
+        .platform a {
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ---------- CONTACT ---------- */
+        .contact {
+            background: var(--paper)
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 40px
+        }
+
+        @media(min-width:900px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: start
+            }
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 14px
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px
+        }
+
+        .field label {
+            font-size: .8rem;
+            font-weight: 600;
+            letter-spacing: .02em
+        }
+
+        .field input,
+        .field textarea {
+            font-family: inherit;
+            font-size: .95rem;
+            padding: 13px 15px;
+            border-radius: 12px;
+            border: 1.5px solid rgba(0, 0, 0, .12);
+            background: #fff;
+            color: var(--ink);
+            transition: border-color .2s, box-shadow .2s;
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(230, 59, 46, .12);
+        }
+
+        .field textarea {
+            resize: vertical;
+            min-height: 110px
+        }
+
+        .contact-form button {
+            justify-self: start;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: #0d0d0d;
+            color: #a8a29a;
+            padding: 44px 0 32px;
+            font-size: .85rem
+        }
+
+        .foot-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px
+        }
+
+        .foot-top .logo {
+            color: #fff
+        }
+
+        .foot-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px
+        }
+
+        .foot-links a:hover {
+            color: #fff
+        }
+
+        .foot-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, .08)
+        }
+
+        /* ---------- ANIMATIONS ---------- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: none
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAV ================= -->
+    <header class="nav">
+        <div class="nav-inner">
+            <a href="#top" class="logo">YOUR<span>BRAND</span></a>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="#products">Products</a>
+                <a href="#story">Our Story</a>
+                <a href="#feed">Live</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#follow" class="nav-cta">Follow us →</a>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+        <div class="wrap hero-grid">
+            <div class="reveal">
+                <span class="eyebrow">New drop · Now live</span>
+                <h1>Made for the ones <em>who move first.</em></h1>
+                <p class="lead">Bold, everyday essentials with a story worth sharing. Discover the range — then catch
+                    the daily drop over on our socials.</p>
+                <div class="btn-row">
+                    <a href="#products" class="btn btn-primary">Explore the range →</a>
+                    <a href="#follow" class="btn btn-ghost">Follow @yourbrand</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="hero-frame">
+                    <div class="tag">Drop 01 — Signature Collection</div>
+                </div>
+                <div class="hero-badge"><span class="dot"></span> Live now on Instagram</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SOCIAL STRIP ================= -->
+    <div class="social-strip">
+        <div class="wrap">
+            <p>Most of the action happens on our socials — come say hi.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2zm0 10.9a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm6.8-11.2a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                    </svg>
+                    Instagram
+                </a>
+                <a href="#" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19.6 7.2a5 5 0 0 1-3.5-1.4 5 5 0 0 1-1.5-3.5h-3.1v12.6a2.9 2.9 0 1 1-2-2.7V9a6 6 0 1 0 5.1 5.9V9.1a8 8 0 0 0 5 1.7V7.7a5 5 0 0 1 0-.5z" />
+                    </svg>
+                    TikTok
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.5c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V14h2.7v8h3.4z" />
+                    </svg>
+                    Facebook
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="section products" id="products">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <h2>The range, in good company.</h2>
+                <p>Every piece is designed to be photographed, shared, and worn on repeat. Tap any item to see more on
+                    our socials.</p>
+            </div>
+            <div class="product-grid">
+                <article class="product reveal">
+                    <div class="product-img alt1"><span>Signature</span></div>
+                    <div class="product-body">
+                        <h3>The Everyday Carry</h3>
+                        <p>Structured, understated, and built to move with you.</p>
+                        <a href="#follow" class="product-link">See more on Instagram →</a>
+                    </div>
+                </article>
+                <article class="product reveal">
+                    <div class="product-img alt2"><span>New</span></div>
+                    <div class="product-body">
+                        <h3>The Red Edit</h3>
+                        <p>Our boldest colourway yet — limited run, seen first on socials.</p>
+                        <a href="#follow" class="product-link">See more on TikTok →</a>
+                    </div>
+                </article>
+                <article class="product reveal">
+                    <div class="product-img alt3"><span>Core</span></div>
+                    <div class="product-body">
+                        <h3>Stone & Sand</h3>
+                        <p>Neutral tones, natural textures, quietly confident.</p>
+                        <a href="#follow" class="product-link">See more on Instagram →</a>
+                    </div>
+                </article>
+                <article class="product reveal">
+                    <div class="product-img alt4"><span>Best Seller</span></div>
+                    <div class="product-body">
+                        <h3>The Night Shift</h3>
+                        <p>Our most requested piece — restocked and ready.</p>
+                        <a href="#follow" class="product-link">See more on Facebook →</a>
+                    </div>
+                </article>
+                <article class="product reveal">
+                    <div class="product-img alt5"><span>Limited</span></div>
+                    <div class="product-body">
+                        <h3>Amber Drop</h3>
+                        <p>Sun-warm tones for the golden hour. Only a handful left.</p>
+                        <a href="#follow" class="product-link">See more on TikTok →</a>
+                    </div>
+                </article>
+                <article class="product reveal">
+                    <div class="product-img"><span>Core</span></div>
+                    <div class="product-body">
+                        <h3>Paper & Grain</h3>
+                        <p>Everyday essentials with a handmade feel.</p>
+                        <a href="#follow" class="product-link">See more on Instagram →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STORY ================= -->
+    <section class="section story" id="story">
+        <div class="wrap">
+            <div class="story-grid">
+                <div class="reveal">
+                    <blockquote class="story-quote">“We built this brand on a phone camera and a stubborn idea: things
+                        should look as good in real life as they do on your feed.”</blockquote>
+                    <div class="story-copy">
+                        <p>It started with a small run, a borrowed camera, and a group chat that wouldn’t stop asking
+                            where to buy. Now it’s a full range — but the spirit is the same: honest, visual, and made
+                            to be shared.</p>
+                        <p>We still post the process before the product. The late nights, the failed samples, the wins.
+                            Follow along and you’ll see the whole story unfold.</p>
+                    </div>
+                    <div class="btn-row" style="margin-top:28px">
+                        <a href="#follow" class="btn btn-primary">Follow the story →</a>
+                    </div>
+                </div>
+                <div class="story-img reveal" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LIVE FEED ================= -->
+    <section class="section feed" id="feed">
+        <div class="wrap">
+            <div class="feed-header reveal">
+                <h2>Live from our feed.</h2>
+                <a href="#follow" class="btn btn-ghost">Follow @yourbrand</a>
+            </div>
+            <div class="feed-grid">
+                <div class="feed-tile t1 reveal" role="img" aria-label="Instagram post preview"></div>
+                <div class="feed-tile t2 reveal" role="img" aria-label="Instagram post preview"></div>
+                <div class="feed-tile t3 reveal" role="img" aria-label="Instagram post preview"></div>
+                <div class="feed-tile t4 reveal" role="img" aria-label="Instagram reel preview">
+                    <div class="play"><svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg></div>
+                </div>
+                <div class="feed-tile t5 reveal" role="img" aria-label="TikTok video preview">
+                    <div class="play"><svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg></div>
+                </div>
+                <div class="feed-tile t6 reveal" role="img" aria-label="Instagram post preview"></div>
+            </div>
+            <p style="margin-top:18px;font-size:.85rem;color:var(--muted);text-align:center">
+                Live feed preview — swap this grid for an embedded feed widget on the live site.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= FOLLOW CTA ================= -->
+    <section class="follow-cta" id="follow">
+        <div class="wrap">
+            <h2>Come for the drop. Stay for the story.</h2>
+            <p>We post daily across Instagram, TikTok, and Facebook. Pick your platform — we’ll meet you there.</p>
+            <div class="platform-cards">
+                <div class="platform">
+                    <div class="p-head">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2zm0 10.9a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm6.8-11.2a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                        <span>Instagram</span>
+                    </div>
+                    <h3>@yourbrand</h3>
+                    <p>Daily drops, studio clips, and the occasional giveaway.</p>
+                    <a href="#" target="_blank" rel="noopener">Follow on Instagram →</a>
+                </div>
+                <div class="platform">
+                    <div class="p-head">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.6 7.2a5 5 0 0 1-3.5-1.4 5 5 0 0 1-1.5-3.5h-3.1v12.6a2.9 2.9 0 1 1-2-2.7V9a6 6 0 1 0 5.1 5.9V9.1a8 8 0 0 0 5 1.7V7.7a5 5 0 0 1 0-.5z" />
+                        </svg>
+                        <span>TikTok</span>
+                    </div>
+                    <h3>@yourbrand</h3>
+                    <p>Behind-the-scenes, process clips, and trend takes.</p>
+                    <a href="#" target="_blank" rel="noopener">Follow on TikTok →</a>
+                </div>
+                <div class="platform">
+                    <div class="p-head">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.5c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V14h2.7v8h3.4z" />
+                        </svg>
+                        <span>Facebook</span>
+                    </div>
+                    <h3>Your Brand</h3>
+                    <p>Community updates, events, and longer-form news.</p>
+                    <a href="#" target="_blank" rel="noopener">Follow on Facebook →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+        <div class="wrap contact-grid">
+            <div class="reveal">
+                <div class="section-head" style="margin-bottom:20px">
+                    <h2>Say hello.</h2>
+                    <p>Wholesale, collabs, or just a question — message us here or slide into our DMs.</p>
+                </div>
+                <div class="social-icons" style="margin-top:10px">
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2zm0 10.9a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm6.8-11.2a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>Instagram</a>
+                    <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.6 7.2a5 5 0 0 1-3.5-1.4 5 5 0 0 1-1.5-3.5h-3.1v12.6a2.9 2.9 0 1 1-2-2.7V9a6 6 0 1 0 5.1 5.9V9.1a8 8 0 0 0 5 1.7V7.7a5 5 0 0 1 0-.5z" />
+                        </svg>TikTok</a>
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.5c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V14h2.7v8h3.4z" />
+                        </svg>Facebook</a>
+                </div>
+            </div>
+            <form class="contact-form reveal"
+                onsubmit="event.preventDefault(); alert('Thanks! This is a mockup — connect to Formspree or your CMS to make it live.');">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us what you're after..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"
+                    style="cursor:pointer;border:none;font-family:inherit">Send message →</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="wrap">
+            <div class="foot-top">
+                <a href="#top" class="logo">YOUR<span>BRAND</span></a>
+                <div class="foot-links">
+                    <a href="#products">Products</a>
+                    <a href="#story">Our Story</a>
+                    <a href="#feed">Live</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© <span id="year"></span> Your Brand. All rights reserved.</span>
+                <span>Made to be shared.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll reveal
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+</body>
+
+</html>
